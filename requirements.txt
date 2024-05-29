@@ -1,3 +1,9 @@
 reathon
 requests
-
+pydantic
+fastapi
+uvicorn
+pandas
+python-dotenv
+loguru
+mutagen

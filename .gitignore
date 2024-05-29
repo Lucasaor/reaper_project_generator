@@ -134,4 +134,5 @@ cython_debug/
 
 #custom
 playground.*
-DS_Store
+.DS_Store
+outputs/*
