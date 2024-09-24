@@ -7,3 +7,6 @@ pandas
 python-dotenv
 loguru
 mutagen
+streamlit
+watchdog
+audio-separator
