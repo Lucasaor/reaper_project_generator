@@ -7,7 +7,7 @@ import os
 def main():
     separator = Separator()
 
-    separator.load_model(model_filename="htdemucs_ft.yaml")
+    separator.load_model(model_filename="htdemucs_6s.yaml")
 
     st.title("YouTube Downloader")
     st.write("This is a simple YouTube downloader that can download audio or video from YouTube.")
@@ -15,7 +15,8 @@ def main():
     file_name = st.text_input("Enter the file name")
     youtube_url = st.text_input("Enter the YouTube URL")
 
-    standard_file_path = f"/Users/lucas/Library/CloudStorage/OneDrive-Personal/Black Violet/VS/{file_name}"
+    standard_file_path = f"/Users/lucas/Library/CloudStorage/OneDrive-Personal/freelas/Vitoria Mercia/{file_name}" #f"/Users/lucas/Library/CloudStorage/OneDrive-Personal/Música/SanDom/Songs/{file_name}" 
+    video_file_path = f"/Users/lucas/Library/CloudStorage/OneDrive-Personal/freelas/Vitoria Mercia/{file_name}" #'/Users/lucas/Library/CloudStorage/OneDrive-Personal/Música/SanDom/Visuals/src'
 
     download_type = st.selectbox("Select download type", ["Audio", "Video"])
     separate_audio = st.checkbox("Separate audio")
@@ -34,7 +35,7 @@ def main():
                     shutil.move(file, standard_file_path+'/compose')
                 st.spinner(text="Process complete!")
         else:
-            download_youtube_video_as_mp4(youtube_url, standard_file_path+'/'+file_name+'.mp4')
+            download_youtube_video_as_mp4(youtube_url, video_file_path+'/'+file_name+'.mp4')
         st.success("Process complete!")
 
 if __name__ == '__main__':
